@@ -3,14 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <title>Github User Locator</title>
   </head>
   <body>
     <div class="mainContainer">
+      <!-- head section -->
       <div class="headContianer">
         <h1>GithubLocator</h1>
         <div class="mode-container">
-          <h5>DARK <i class="fa-solid fa-moon"></i></h5>
+          <h5 data-modeText>DARK</h5>
+          <img
+            src="./Images/moon-icon.svg"
+            alt=""
+            id="modeIcon"
+            loading="lazy"
+          />
         </div>
       </div>
 
@@ -24,23 +39,22 @@
           id="search"
         />
 
-        <div class="noUser-found">
-          <p id="noResultsElem">no search results</p>
-        </div>
+        <p id="noResultsElem">no search results</p>
 
         <button class="btn" type="submit">Search</button>
       </div>
 
+      <!-- card section -->
       <div class="cardContainer">
         <div class="profileSection">
+          <div class="userImg">
+            <img src="" data-image loading="lazy" alt="" />
+          </div>
           <div class="userInfo">
-            <img width="80px" src="" data-image loading="lazy" alt="" />
             <div class="username">
               <h3 data-name></h3>
-              <a data-username href=""></a>
+              <a data-username href="" target="_blank"></a>
             </div>
-          </div>
-          <div class="joinedInfo">
             <p data-date></p>
           </div>
         </div>
@@ -50,42 +64,42 @@
         <div class="followerSection">
           <div class="followInfo">
             <p>Repos</p>
-            <a href="" data-repoCount></a>
+            <a href="" target="_blank" data-repoCount></a>
           </div>
           <div class="followInfo">
             <p>Followers</p>
-            <a href="" data-followers></a>
+            <a href="" target="_blank" data-followers></a>
           </div>
           <div class="followInfo">
             <p>Following</p>
-            <a href="" data-following></a>
+            <a href="" target="_blank" data-following></a>
           </div>
         </div>
         <div class="socialSection">
           <div class="profileInfo">
             <div class="bottomIcon">
-              <i class="fa-solid fa-location-dot"></i>
+              <img src="./Images/location-icon.svg" alt="" loading="lazy" />
             </div>
             <p data-location></p>
           </div>
 
           <div class="profileInfo">
             <div class="bottomIcon">
-              <i class="fa-solid fa-link"></i>
+              <img src="./Images/website-icon.svg" alt="" loading="lazy" />
             </div>
-            <a data-website></a>
+            <a target="_blank" data-website></a>
           </div>
 
           <div class="profileInfo">
             <div class="bottomIcon">
-              <i class="fa-brands fa-x-twitter"></i>
+              <img src="./Images/twitter-icon.svg" alt="" loading="lazy" />
             </div>
-            <a data-twitter></a>
+            <a target="_blank" data-twitter></a>
           </div>
 
           <div class="profileInfo">
             <div class="bottomIcon">
-              <i class="fa-regular fa-building"></i>
+              <img src="./Images/company-icon.svg" alt="" loading="lazy" />
             </div>
             <p data-company></p>
           </div>

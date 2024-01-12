@@ -137,4 +137,44 @@ function renderProfile(data) {
   }
 }
 
+// for dark and light mode
+const modeBtn = document.querySelector(".mode-container");
+const modeText = document.querySelector("[data-modeText]");
+const modeIcon = document.querySelector("#data-modeIcon");
+
+let darkMode = false;
+const root = document.documentElement.style;
+
+modeBtn.addEventListener("click", () => {
+  if (darkMode === false) {
+    enableDarkMode();
+  } else {
+    enableLightMode();
+  }
+});
+
+function enableDarkMode() {
+  root.setProperty("--bg", "#141D2F");
+  root.setProperty("--bg-content", "#1E2A47");
+  root.setProperty("--text", "white");
+  root.setProperty("--text-alt", "white");
+  root.setProperty("--shadow-xl", "rgba(70,88,109,0.15)");
+  modeText.innerText = "LIGHT";
+  modeIcon.src = "./Images/sun-icon.svg";
+  root.setProperty("--icon-bg", "brightness(1000%)");
+  darkMode = true;
+}
+
+function enableLightMode() {
+  root.setProperty("--bg", "#F6F8FF");
+  root.setProperty("--bg-content", "#FEFEFE");
+  root.setProperty("--text", "#4B6A9B");
+  root.setProperty("--text-alt", "#2B3442");
+  root.setProperty("--shadow-xl", "rgba(70, 88, 109, 0.25)");
+  modeText.innerText = "DARK";
+  modeIcon.src = "./Images/moon-icon.svg";
+  root.setProperty("--icon-bg", "brightness(100%)");
+  darkMode = false;
+}
+
 getUserData(url + "saurabh-shivam");
