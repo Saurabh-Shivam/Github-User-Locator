@@ -140,7 +140,7 @@ function renderProfile(data) {
 // for dark and light mode
 const modeBtn = document.querySelector(".mode-container");
 const modeText = document.querySelector("[data-modeText]");
-const modeIcon = document.querySelector("#data-modeIcon");
+const modeIcon = document.querySelector("#modeIcon");
 
 let darkMode = false;
 const root = document.documentElement.style;
@@ -177,4 +177,5 @@ function enableLightMode() {
   darkMode = false;
 }
 
+// on homepage this user data will be showed
 getUserData(url + "saurabh-shivam");

@@ -70,7 +70,14 @@
   height: 60px;
   margin-top: -14px;
   background-color: var(--bg-content);
+  box-shadow: var(--shadow);
   padding-left: 20px;
+  /* for search icon image */
+  background-image: url(./Images/search-icon.svg);
+  background-repeat: no-repeat;
+  background-position-x: 24px;
+  background-position-y: center;
+  background-size: 20px;
   /* bcz we have to change the position of noResultsElem manually */
   position: relative;
 }
@@ -82,8 +89,9 @@
   /* margin-left: -50px; */
   /* bcz we have to change the position of search icon manually */
   position: relative;
-  left: 30px;
+  left: 35px;
   background-color: var(--bg-content);
+  color: var(--text);
 }
 
 #search::placeholder {
@@ -91,7 +99,7 @@
   color: var(--text);
 }
 
-.inputContainer i {
+/* .inputContainer i {
   position: absolute;
   top: 22px;
   display: flex;
@@ -99,7 +107,7 @@
   justify-content: center;
   color: #1a86ff;
   font-size: 18px;
-}
+} */
 
 .btn {
   display: flex;
